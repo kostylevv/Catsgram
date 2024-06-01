@@ -9,6 +9,7 @@ import java.time.Instant;
 import java.util.Collection;
 import java.util.HashMap;
 import java.util.Map;
+import java.util.Optional;
 
 // Указываем, что класс PostService - является бином и его 
 // нужно добавить в контекст приложения
@@ -18,6 +19,14 @@ public class PostService {
 
     public Collection<Post> findAll() {
         return posts.values();
+    }
+
+    public Optional<Post> findById(long postId) {
+        if (posts.containsKey(postId)) {
+            return Optional.of(posts.get(postId));
+        } else {
+            return Optional.empty();
+        }
     }
 
     public Post create(Post post) {

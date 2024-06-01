@@ -26,6 +26,11 @@ public class PostController {
         return postService.findAll();
     }
 
+    @GetMapping("/post/{postId}")
+    public Post findPost(@PathVariable("postId") Integer postId){
+        return postService.findById(postId).orElseThrow(() -> new ConditionsNotMetException("Указанный пост не найден"));
+    }
+
     @PostMapping
     public Post create(@RequestBody Post post) {
        return postService.create(post);

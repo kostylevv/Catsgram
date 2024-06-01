@@ -19,6 +19,12 @@ public class UserService {
         return users.values();
     }
 
+    public User findUserByEmail(String email) {
+        if (email == null) {
+            return null;
+        }
+        return users.get(email);
+    }
     public User create(User newUser) {
         // проверяем выполнение необходимых условий
         if (newUser.getEmail() == null || newUser.getEmail().isBlank()) {
