@@ -3,7 +3,6 @@ package com.vkostylev.catsgram.service;
 import com.vkostylev.catsgram.exception.ConditionsNotMetException;
 import com.vkostylev.catsgram.model.Image;
 import com.vkostylev.catsgram.model.Post;
-import com.vkostylev.catsgram.service.PostService;
 import lombok.RequiredArgsConstructor;
 import org.springframework.beans.factory.annotation.Value;
 import org.springframework.stereotype.Service;

@@ -25,8 +25,8 @@ public class UserService {
         }
         return users.get(email);
     }
+
     public User create(User newUser) {
-        // проверяем выполнение необходимых условий
         if (newUser.getEmail() == null || newUser.getEmail().isBlank()) {
             throw new ConditionsNotMetException("Имейл должен быть указан");
         }

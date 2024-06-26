@@ -11,8 +11,6 @@ import java.util.HashMap;
 import java.util.Map;
 import java.util.Optional;
 
-// Указываем, что класс PostService - является бином и его 
-// нужно добавить в контекст приложения
 @Service
 public class PostService {
     private final Map<Long, Post> posts = new HashMap<>();
